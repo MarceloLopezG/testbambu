@@ -1,0 +1,127 @@
+body{
+   background-image: url('../../../assets/background/wallpaper.jpg');
+   background-position: center center;   
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   background-color: #669996;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height:100%;
+}
+
+.autoScroll{
+   overflow-x: auto;
+   margin: auto
+ }
+
+.tabla
+{   
+   width: auto;
+   height: 550px;
+   background: #FFFFFF;
+   box-sizing: border-box;
+   box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25); 
+   text-align: left;
+   margin: auto;   
+}
+
+.design_image{
+   height: 200px;
+   background-position: center center;   
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+}
+
+.group_btn{
+   text-align: center;
+   align-content: center;
+   margin: auto;
+   top: auto;
+   align-content: flex-end;
+}
+
+.form-check-label{
+   font-weight: bold;
+   font-size: 13px;
+}
+.card-text{
+   text-align: center;
+   font-size: 14px;
+}
+
+.card-title{
+   font-weight: bold;
+   text-align: center;
+   margin: 4%;
+}
+
+.design_login{
+   height: 40px;
+   padding: 2%;
+}
+
+.text_login{
+   text-align: center;
+   margin: 4%;
+   font-weight: bold;
+   font-size: 14px;
+}
+
+.design_input{
+   width: 95%;
+   position: relative;
+   height: 50px;
+   overflow: hidden;
+
+}
+.design_input input{
+   width: 100%;
+   height: 100%;
+   color: #595f6e;
+   padding-top: 6px;
+   border: none;
+   outline: none;
+}
+
+.design_input label{
+   position: absolute;
+   bottom: 0px;
+   left: 0%;
+   width: 100%;
+   height: 100%;
+   pointer-events: none;
+   border-bottom: 1px solid black;
+}
+
+.design_input label::after{
+   content: "";
+   position: absolute;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+   transform: translateX(-100%);
+   transition: transform 0.3s ease;
+}
+
+.content-name{
+   position: absolute;
+   bottom: 5px;
+   left: 0px;
+   transition: all 0.3s ease;
+   transform: translateY(-55%);
+}
+
+.design_input input:focus + .label-name .content-name, .design_input input:valid + .label-name .content-name{
+   transform: translateY(-80%);
+   font-size: 15px;
+   color: #2C7DC5;
+}
+
+.design_input input:focus .label-name::after, .design_input input:valid + .label-name::after{
+   transform: translateX(0%);
+}
+
