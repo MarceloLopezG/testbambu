@@ -13,12 +13,16 @@ import { UserinfoComponent } from './pages/userinfo/userinfo.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 
+import { HttpClientModule } from '@angular/common/http';
+import { NewsComponent } from './pages/news/news.component'; // Para las noticias
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    UserinfoComponent
+    UserinfoComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     AngularFireDatabaseModule,
     AngularFirestoreModule,
     FormsModule,
+    HttpClientModule,
 
   ],
   providers: [],
