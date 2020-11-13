@@ -43,17 +43,12 @@ export class LoginComponent implements OnInit {
 
   validateForm(email, password) {
     if (email.lenght === 0) {
-      this.errorMessage = "please enter email id";
+      this.errorMessage = "please enter email";
       return false;
     }
 
     if (password.lenght === 0) {
       this.errorMessage = "please enter password";
-      return false;
-    }
-
-    if (password.lenght < 6) {
-      this.errorMessage = "password should be at least 6 char";
       return false;
     }
 
