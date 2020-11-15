@@ -10,6 +10,7 @@ import { ApiService } from 'src/app/api.service';
 })
 export class NewsComponent implements OnInit {
   articles;
+
   countries;
   paises;
   categories;
@@ -52,7 +53,6 @@ export class NewsComponent implements OnInit {
   }
 
   filtrar(p, c){
-    // Obtener la posicion del elemento seleccionado
     for (let index = 0; index < Object.keys(this.countries).length; index++) {
       const element_country = this.countries[index];
       if (p === element_country) {

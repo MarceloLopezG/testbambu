@@ -16,12 +16,8 @@ export class RegisterComponent implements OnInit {
   errorMessage = '';
   error : { name:string, message:string } = {name:'', message: ''}
 
-  constructor(private authservice: AuthService, private router: Router) {
-  }
-
-  ngOnInit(): void {
-  }
-
+  constructor(private authservice: AuthService, private router: Router) { }
+  ngOnInit(): void { }
 
   clearErrorMessage()
   {
@@ -36,7 +32,7 @@ export class RegisterComponent implements OnInit {
       this.authservice.registerWithEmail(this.email, this.password)
         .then(() => {
           this.message = "you are register with data on firbase"
-          //this.router.navigate(['/userinfo'])
+          this.router.navigate(['/login'])
         }).catch(_error => {
           this.error = _error
           this.router.navigate(['/register'])
@@ -47,18 +43,7 @@ export class RegisterComponent implements OnInit {
 
   validateForm(email, password)
   {
-    if(email.lenght === 0)
-    {
-      this.errorMessage = "please enter email";
-      return false;
-    }
-
-    if (password.lenght === 0) {
-      this.errorMessage = "please enter password";
-      return false;
-    }
-
-    if (password.lenght < 8)
+    if (password.lenght < 6)
     {
       this.errorMessage = "password should be at least 8 char";
       return false;

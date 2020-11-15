@@ -8,7 +8,6 @@ import {Router} from '@angular/router'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   email = "";
   password = "";
   message = '';
@@ -17,8 +16,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private authservice: AuthService, private router: Router) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   clearErrorMessage()
   {
@@ -26,33 +24,15 @@ export class LoginComponent implements OnInit {
     this.error = {name : '' , message:''};
   }
 
-
   login()
   {
     this.clearErrorMessage();
-    if (this.validateForm(this.email, this.password)) {
-      this.authservice.loginWithEmail(this.email, this.password)
-        .then(() => {
-         this.router.navigate(['/news'])
-        }).catch(_error => {
-          this.error = _error
-          this.router.navigate(['/login'])
-        })
-    }
-  }
-
-  validateForm(email, password) {
-    if (email.lenght === 0) {
-      this.errorMessage = "please enter email";
-      return false;
-    }
-
-    if (password.lenght === 0) {
-      this.errorMessage = "please enter password";
-      return false;
-    }
-
-    this.errorMessage = '';
-    return true;
+    this.authservice.loginWithEmail(this.email, this.password)
+      .then(() => {
+       this.router.navigate(['/news'])
+      }).catch(_error => {
+        this.error = _error
+        this.router.navigate(['/login'])
+      })
   }
 }

@@ -6,88 +6,88 @@
     <title>Register</title>
 </head>
 <body class="autoScroll">
-    <div class="container">
-        <div class="row">
-          <div class="col-md-6 mt-5 mx-auto">
-            <form (ngSubmit)="register()">
-              <table class="tabla">
-                  <tr>
-                        <td>
-                            <div class="card" style="width: 18rem; height: 520px; border: transparent;">
-                                <img src="../../../assets/background/news.jpg" class="design_image">
-                                <div class="card-body" style="margin-top: 15%;">
-                                <h5 class="card-title">Welcome page</h5>
-                                <p class="card-text">Welcome to the page where you will find the latest news about the weather around the world.</p>
-                                <br><br>
-                                <div class="group_btn">
-                                    <img src="../../../assets/background/logintwitter.png" class="design_login">
-                                    <img src="../../../assets/background/logingoogle.png" class="design_login">
-                                    <img src="../../../assets/background/loginfacebook.png" class="design_login">
+    <div class="container" >
+        <div class="row justify-content-center align-items-center">
+          <form (ngSubmit)="register()">
+            <table class="tabla">
+                <tr>
+                    <td>
+                        <div class="card" style="width: 18rem; height: 520px; border: transparent;">
+                            <img src="../../../assets/background/news.jpg" class="design_image">
+                            <div class="card-body" style="margin-top: 15%;">
+                    
+                            <h5 class="card-title">Welcome page</h5>
+                            <p class="card-text">Welcome to the page where you will find the latest news about the weather around the world.</p>
+                            <br><br>
+                            
+                            <div class="group_btn">
+                                <img src="../../../assets/background/logintwitter.png" class="design_login">
+                                <img src="../../../assets/background/logingoogle.png" class="design_login">
+                                <img src="../../../assets/background/loginfacebook.png" class="design_login">
+                            </div>
+                            <br>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="card" style="width: 18rem; height: 550px; border-right: transparent; border-bottom:transparent; border-top:transparent">
+                            <div class="card-body" style="margin-block-start: 10%;">
+                                <h5 class="card-title">Sign in</h5>
+                                <br>
+                                <div class="form-group" style="text-align: left; margin:3%">
+                                    <div class="design_input">
+                                        <input type="email" name="email" [(ngModel)]="email" required>
+                                        <label for="name" class="label-name">
+                                            <span class="content-name"> Email</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="text-align: left; margin:3%">    
+                                    <div class="design_input">
+                                        <input type="password" name="password" [(ngModel)]="password" required>
+                                        <label for="name" class="label-name">
+                                            <span class="content-name"> Password</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="text-align: left; margin:3%">    
+                                    <div class="design_input">
+                                        <input type="password" name="confirm_password" [(ngModel)]="confirm_password" required>
+                                        <label for="name" class="label-name" >
+                                            <span class="content-name"> Confirm Password</span>
+                                        </label>
+                                    </div>
                                 </div>
                                 <br>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">I agree all statements in <a href="">terms of service</a></label>
                                 </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="card" style="width: 18rem; height: 520px; border-right: transparent; border-bottom:transparent; border-top:transparent">
-                                <div class="card-body">
-                                    <h5 class="card-title">Sign in</h5>
-                                    <br><br>
-                                    <div class="form-group" style="text-align: left; margin:3%">
-                                        <div class="design_input">
-                                            <input type="email" name="email" [(ngModel)]="email" required>
-                                            <label for="name" class="label-name">
-                                                <span class="content-name"> Email</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group" style="text-align: left; margin:3%">    
-                                        <div class="design_input">
-                                            <input type="password" name="password" [(ngModel)]="password" required>
-                                            <label for="name" class="label-name">
-                                                <span class="content-name"> Password</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group" style="text-align: left; margin:3%">    
-                                        <div class="design_input">
-                                            <input type="password" name="confirm_password" [(ngModel)]="confirm_password" required>
-                                            <label for="name" class="label-name" >
-                                                <span class="content-name"> Confirm Password</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">I agree all statements in <a href="">terms of service</a></label>
-                                    </div>
-                                    <br>
-                                    <div>
-                                        <button type="submit" class="btn btn-primary" style="width: 250px; height: 38px; font-weight: bold;"
-                                        >Register</button>
-                                    </div>
-                                    <div>
-                                        <p class="text_login">Already have an account? <a href="#" routerLink="/login">login</a></p>
-                                    </div>
+                                <br>
+                                <div>
+                                    <button type="submit" class="btn btn-primary" style="width: 250px; height: 38px; font-weight: bold;"
+                                    >Register</button>
+                                </div>
+                                <div>
+                                    <p class="text_login">Already have an account? <a href="#" routerLink="/login">login</a></p>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <p ng-if="errorMessage.length > 0" class="text-danger">
+                                        {{errorMessage}} </p>
                                     
-                                    <div class="form-group">
-                                        <p ng-if="errorMessage.length > 0" class="text-danger">
-                                            {{errorMessage}} </p>
-                                        
-                                        <p ng-if="error.message.length > 0" class="text-danger">
-                                            {{error.message}} </p>
-                        
-                                        <p ng-if="message.length > 0" class="text-info">
-                                            {{message}} </p>
-                                    </div>
+                                    <p ng-if="error.message.length > 0" class="text-danger">
+                                        {{error.message}} </p>
+                    
+                                    <p ng-if="message.length > 0" class="text-info">
+                                        {{message}} </p>
                                 </div>
                             </div>
-                        </td>
-                  </tr>
-              </table>
-            </form>
-          </div>
+                        </div>
+                    </td>        
+                </tr>
+            </table>
+          </form>
         </div>
     </div>
 </body>

@@ -1,19 +1,20 @@
 body{
-    background-image: url('../../../assets/background/wallpaper.jpg');
-    background-position: center center;   
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #669996;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height:100%;
+   background-image: url('../../../assets/background/wallpaper.jpg');
+   background-position: center center;   
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   background-color: #669996;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height:100%;
  }
  
  .autoScroll{
     overflow-x: auto;
+    margin: auto;
   }
  
  .tabla
@@ -22,17 +23,24 @@ body{
     height: 550px;
     background: #FFFFFF;
     box-sizing: border-box;
-    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25); 
-    text-align: left;
-    margin: auto;   
+    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);   
+    margin-block-start: 10%;
+    overflow-x: auto;    
  }
  
  .design_image{
-    height: 200px;
-    background-position: center center;   
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+   height: 200px;
+   background-position: center center;   
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+ }
+ .group_btn{
+   text-align: center;
+   align-content: center;
+   margin: auto;
+   top: auto;
+   align-content: flex-end;
  }
  
  .group_btn_profile{
@@ -59,9 +67,10 @@ body{
  }
  
  .card-title{
-    font-weight: bold;
-    text-align: center;
-    margin: 4%;
+   font-size: 22px;
+   font-weight: bold;
+   text-align: center;
+   margin: 4%;
  }
  
  .design_login{
@@ -107,6 +116,8 @@ body{
     height: 100%;
     pointer-events: none;
     border-bottom: 1px solid black;
+    font-size: 15px;
+    color: black;
  }
  
  .design_input label::after{
