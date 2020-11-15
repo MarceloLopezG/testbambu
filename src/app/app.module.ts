@@ -9,7 +9,6 @@ import {environment} from '../environments/environment';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { UserinfoComponent } from './pages/userinfo/userinfo.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 
@@ -21,7 +20,6 @@ import { NewsComponent } from './pages/news/news.component'; // Para las noticia
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    UserinfoComponent,
     NewsComponent
   ],
   imports: [

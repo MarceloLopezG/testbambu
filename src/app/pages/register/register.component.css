@@ -14,7 +14,8 @@ body{
 
 .autoScroll{
    overflow-x: auto;
-   margin: auto
+   margin: auto;
+   padding: auto;
  }
 
 .tabla
