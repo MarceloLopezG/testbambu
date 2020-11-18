@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import {environment} from '../environments/environment';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -13,7 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
-import { NewsComponent } from './pages/news/news.component'; // Para las noticias
+import { NewsComponent } from './pages/news/news.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,6 @@ import { NewsComponent } from './pages/news/news.component'; // Para las noticia
     AngularFirestoreModule,
     FormsModule,
     HttpClientModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,79 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
-</head>
-<body class="autoScroll">
+  </head>
+  <body class="autoScroll">
     <div class="container">
-        <div class="row justify-content-center align-items-center">
-          <form (ngSubmit)="login()">
-            <table class="tabla">
-                <tr>
-                    <td>
-                        <div class="card" style="width: 18rem; height: 520px; border: transparent;">
-                            <img src="../../../assets/background/news.jpg" class="design_image">
-                            <div class="card-body" style="margin-top: 15%;">
-                            <h5 class="card-title">Welcome page</h5>
-                            <p class="card-text">Welcome to the page where you will find the latest news about the weather around the world.</p>
-                            <br><br>
-                            <div class="group_btn">
-                                <img src="../../../assets/background/logintwitter.png" class="design_login">
-                                <img src="../../../assets/background/logingoogle.png" class="design_login">
-                                <img src="../../../assets/background/loginfacebook.png" class="design_login">
-                            </div>
-                            <br>
-                            </div>
-                        </div>
-                    </td>
-                      <td>
-                          <div class="card" style="width: 18rem; height: 550px; border-right: transparent; border-bottom:transparent; border-top:transparent">
-                              <br>
-                              <div class="group_btn_profile">
-                              <img src="../../../assets/background/profile.png" class="card-img-top">
-                              <h5 class="card-title">Welcome</h5>
-                              </div>
-                              <div class="card-body">
-                                  <div class="form-group" style="text-align: left; margin:3%">
-                                      <div class="design_input">
-                                          <input type="email" name="email" [(ngModel)]="email" required>
-                                          <label for="name" class="label-name">
-                                              <span class="content-name"> Email</span>
-                                          </label>
-                                      </div>
-                                  </div>
-                                  <div class="form-group" style="text-align: left; margin:3%">    
-                                      <div class="design_input">
-                                          <input type="password" name="password" [(ngModel)]="password" required>
-                                          <label for="name" class="label-name">
-                                              <span class="content-name"> Password</span>
-                                          </label>
-                                      </div>
-                                  </div>
-                                  <div class="form-group form-check">
-                                      <a href="" class="forgot_password">Forgot password?</a>
-                                  </div>
-                                  <div>
-                                      <button type="submit" class="btn btn-primary" style="width: 250px; height: 38px; font-weight: bold;"
-                                      >Login</button>
-                                  </div>
-                                  <div>
-                                      <p class="text_login">Don't have account? <a href="#" routerLink="/register">register</a></p>
-                                  </div>
-                                  <div class="message_error">
-                                      <p *ngIf="errorMessage.length > 0" class="text-danger">
-                                          {{errorMessage}}</p>
-                                      <p *ngIf="error.message.length > 0" class="text-danger">
-                                          {{error.message}} </p>                                       
-                                  </div>
-                              </div>
-                          </div>
-                      </td>
-                </tr>
-            </table>
-          </form>
-        </div>
+      <div class="row justify-content-center align-items-center">
+        <form (ngSubmit)="login()">
+          <table class="tabla">
+            <tr>
+              <td>
+                <div class="card" style="width: 18rem; height: 520px; border:
+                  transparent;">
+                  <img src="../../../assets/background/news.jpg"
+                    class="design_image">
+                  <div class="card-body" style="margin-top: 15%;">
+                    <h5 class="card-title">Welcome page</h5>
+                    <p class="card-text">Welcome to the page where you will find
+                      the latest news about the weather around the world.</p>
+                    <br><br>
+                    <div class="group_btn">
+                      <img src="../../../assets/background/logintwitter.png"
+                        class="design_login">
+                      <img src="../../../assets/background/logingoogle.png"
+                        class="design_login">
+                      <img src="../../../assets/background/loginfacebook.png"
+                        class="design_login">
+                    </div>
+                    <br>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="card" style="width: 18rem; height: 550px;
+                  border-right: transparent; border-bottom:transparent;
+                  border-top:transparent">
+                  <br>
+                  <div class="group_btn_profile">
+                    <img src="../../../assets/background/profile.png"
+                      class="card-img-top">
+                    <h5 class="card-title">Welcome</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group" style="text-align: left; margin:3%">
+                      <div class="design_input">
+                        <input type="email" name="email" [(ngModel)]="email"
+                          required>
+                        <label for="name" class="label-name">
+                          <span class="content-name"> Email</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group" style="text-align: left; margin:3%">
+                      <div class="design_input">
+                        <input type="password" name="password"
+                          [(ngModel)]="password" required>
+                        <label for="name" class="label-name">
+                          <span class="content-name"> Password</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group form-check">
+                      <a href="" class="forgot_password">Forgot password?</a>
+                    </div>
+                    <div>
+                      <button type="submit" class="btn btn-primary"
+                        style="width: 250px; height: 38px; font-weight: bold;">Login</button>
+                    </div>
+                    <div>
+                      <p class="text_login">Don't have account? <a href="#"
+                          routerLink="/register">register</a></p>
+                    </div>
+                    <div class="message_error">
+                      <p *ngIf="errorMessage.length> 0" class="text-danger">
+                        {{errorMessage}}</p>
+                      <p *ngIf="error.message.length> 0" class="text-danger">
+                        {{error.message}} </p>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>
